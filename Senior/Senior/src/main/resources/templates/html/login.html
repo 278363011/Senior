@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>	
+<head>
+<title>Login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="/css/style.css" rel='stylesheet' type='text/css' />
+<link rel="icon" type="image/png" href="/img/page-ico.jpg">
+<!--//webfonts-->
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<script>$(document).ready(function(c) {
+	$('.close').on('click', function(c){
+		$('.login-form').fadeOut('slow', function(c){
+	  		$('.login-form').remove();
+		});
+	});	  
+});
+</script>
+ <!--SIGN UP-->
+ <h1>聚会电商后台管理登录</h1>
+<div class="login-form">
+		<div class="head-info">
+			<label class="lbl-1"> </label>
+			<label class="lbl-2"> </label>
+			<label class="lbl-3"> </label>
+		</div>
+			<div class="clear"> </div>
+	<div class="avtar">
+		<img src="/img/avtar.png" />
+	</div>
+			<form action="/loginTransfer" method="post">
+					<input type="text"  name="username"      class="text" placeholder="请输入用户名..." onfocus="this.value = '';" >
+					<input type="password"  name="password" placeholder="请输入密码..."    value="" onfocus="this.value = '';">
+					<div class="signin">
+						<input type="submit" value="登  录" >
+					</div>
+			</form>
+	
+</div>
+ <div class="copy-rights">
+					<p>Copyright &copy; 2018.衡阳电子商务有限公司
+			</div>
+
+</body>
+</html>

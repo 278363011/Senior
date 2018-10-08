@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>云单通首页</title>
+		
+       <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+		<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+		<link href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdn.datatables.net/v/dt/b-1.5.2/b-flash-1.5.2/datatables.min.css"/>
+		<link rel="stylesheet" href="/css/main.css" />
+		<link rel="stylesheet" href="/css/icons.css" />
+		<link rel="stylesheet" href="/css/index.css" />
+		
+		<!--<script type="text/javascript" src="js/require.js" defer async="true" data-main="js/main"></script>-->
+	</head>
+	<body>
+		<!--
+        	作者：278363011@qq.com
+        	时间：2018-08-01
+        	描述：页面头部-导航
+  		-->
+		<div class="header">
+							<nav class="navbar navbar-default navbar-fixed-top">
+								  <div class="container-fluid">
+								    <!-- Brand and toggle get grouped for better mobile display -->
+								    <div class="navbar-header col-sm-2 col-md-2 col-lg-2">
+								      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								        <span class="sr-only">Toggle navigation</span>
+								        <span class="icon-bar"></span>
+								        <span class="icon-bar"></span>
+								        <span class="icon-bar"></span>
+								      </button>
+								      <a class="navbar-brand" href="#"><i class="fa fa-optin-monster fa-lg" aria-hidden="true"></i><strong>云单通</strong></a>
+								    </div>
+								    <!-- Collect the nav links, forms, and other content for toggling -->
+								    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								    
+								      <ul class="nav navbar-nav navbar-right">
+								        <li id="xl"><a href="#"><i class="fa fa-arrow-circle-o-down fa-lg" aria-hidden="true"></i> <span></span></a></li>
+
+								      	
+								          <li class="dropdown">
+								          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cog fa-lg" aria-hidden="true"></i> <span>设置</span> <span class="caret"></span></a>
+								          <ul class="dropdown-menu">
+								            <li><a href="#">Action</a></li>
+								            <li><a href="#">Another action</a></li>
+								            <li><a href="#">Something else here</a></li>
+								            <li role="separator" class="divider"></li>
+								            <li><a href="#">Separated link</a></li>
+								          </ul>
+								        </li>
+								        
+								         <li class="dropdown">
+								          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> <span>收件箱</span> <span class="caret"></span></a>
+								          <ul class="dropdown-menu">
+								            <li><a href="#">Action</a></li>
+								            <li><a href="#">Another action</a></li>
+								            <li><a href="#">Something else here</a></li>
+								            <li role="separator" class="divider"></li>
+								            <li><a href="#">Separated link</a></li>
+								          </ul>
+								        </li>
+								        
+								        <li id="chat"><a href="#"><i class="fa fa-comments fa-lg" aria-hidden="true"></i> <span>聊天</span></a></li>
+								        
+								        <li class="dropdown">
+								          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-users fa-lg" aria-hidden="true"></i> <span>管理员</span> <span class="caret"></span></a>
+								          <ul class="dropdown-menu">
+								            <li><a href="#">个人中心</a></li>
+								            <li><a href="#">设置</a></li>
+								            <li><a href="#">Something else here</a></li>
+								            <li role="separator" class="divider"></li>
+								            <li><a href="#">退出</a></li>
+								          </ul>
+								        </li>
+								        
+								        <li id="fullscreen"><a href="#"><i class="fa fa-arrows-alt fa-lg" aria-hidden="true"></i> <span>开启全屏</span></a></li>
+								      </ul>
+								    </div><!-- /.navbar-collapse -->
+								     
+								  </div><!-- /.container-fluid -->
+									  <!--  隐藏下拉菜单menu        -->
+									  <div class="scollmode col-sm-12 col-md-12 col-lg-12">
+											<div class="graphicpoto">
+												<i class="fa fa-firefox fa-3x" aria-hidden="true"></i>
+												<div><span>22</span> </div>
+											</div>
+											<div class="graphicpoto">
+												<i class="fa fa-firefox fa-3x" aria-hidden="true"></i>
+												<div><span>22</span></div>
+											</div>
+											<div class="graphicpoto">
+												<i class="fa fa-firefox fa-3x" aria-hidden="true"></i>
+												<div><span>22</span></div>
+											</div>
+									  </div>
+									  
+									 <!--
+                                     	作者：278363011@qq.com
+                                     	时间：2018-08-04
+                                     	描述：右边语言框
+                                     -->
+									   <div id="right-sidebar" style="display: none;">
+								            <!-- Start .sidebar-inner -->
+								            <div class="sidebar-inner">
+								                <div class="sidebar-panel mt0">
+								                    <div class="sidebar-panel-content fullwidth pt0">
+								                    	<!--联系人信息框  -->
+								                        <div class="chat-user-list" id="chatinfouser">
+								                            <form class="form-horizontal chat-search" role="form">
+								                                <div class="form-group">
+								                                    <input type="text" class="form-control" placeholder="查找用户...">
+								                                    <button type="submit"><i class="ec-search s16"></i>
+								                                    </button>
+								                                </div>
+								                                <!-- End .form-group  -->
+								                            </form>
+								                            <ul class="chat-ui bsAccordion">
+								                                <li>
+								                                    <a href="#">最近联系人 <span class="notification teal">4</span><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+								                                    <ul class="in">
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/49.jpg" alt="@chadengle">小A
+								                                                <span class="has-message"><i class="fa fa-pencil-square" aria-hidden="true"></i></span>
+								                                            </a>
+								                                            <span class="status online"><i class="en-dot"></i></span>
+								                                        </li>
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/54.jpg" alt="@alagoon">小B</a>
+								                                            <span class="status offline"><i class="en-dot"></i></span>
+								                                        </li>
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/52.jpg" alt="@koridhandy">小C</a>
+								                                            <span class="status"><i class="en-dot"></i></span>
+								                                        </li>
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/50.jpg" alt="@divya">小D</a>
+								                                            <span class="status"><i class="en-dot"></i></span>
+								                                        </li>
+								                                    </ul>
+								                                </li>
+								                                <li>
+								                                    <a href="#">在线 <span class="notification green">3</span><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+								                                    <ul class="in">
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/51.jpg" alt="@kolage">大A</a>
+								                                            <span class="status online"><i class="en-dot"></i></span>
+								                                        </li>
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/55.jpg" alt="@mikebeecham">大B</a>
+								                                            <span class="status online"><i class="en-dot"></i></span>
+								                                        </li>
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/53.jpg" alt="@derekebradley">大C</a>
+								                                            <span class="status online"><i class="en-dot"></i></span>
+								                                        </li>
+								                                    </ul>
+								                                </li>
+								                                <li>
+								                                    <a href="#">离线 <span class="notification red">5</span><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+								                                    <ul>
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/56.jpg" alt="@laurengray">大D</a>
+								                                            <span class="status offline"><i class="en-dot"></i></span>
+								                                        </li>
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/49.jpg" alt="@chadengle">大E</a>
+								                                            <span class="status offline"><i class="en-dot"></i></span>
+								                                        </li>
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/58.jpg" alt="@frankiefreesbie">大F</a>
+								                                            <span class="status offline"><i class="en-dot"></i></span>
+								                                        </li>
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/57.jpg" alt="@joannefournier">大G</a>
+								                                            <span class="status offline"><i class="en-dot"></i></span>
+								                                        </li>
+								                                        <li>
+								                                            <a href="#" class="chat-name">
+								                                                <img class="chat-avatar" src="/img/59.jpg" alt="@aiiaiiaii">大H</a>
+								                                            <span class="status offline"><i class="en-dot"></i></span>
+								                                        </li>
+								                                    </ul>
+								                                </li>
+								                            </ul>
+								                        </div>
+								                        <!--聊天语言模板框 -->
+								                        <div class="chat-box" id="chatinfowindow">
+								                            <h5>聊天框</h5>
+								                            <a id="close-user-chat" href="#" class="btn btn-xs btn-primary"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+								                            <ul class="chat-ui chat-messages">
+								                                <li class="chat-user">
+								                                    <p class="avatar">
+								                                        <img src="/img/49.jpg" alt="@chadengle">
+								                                    </p>
+								                                    <p class="chat-name">小黑 <span class="chat-time">15分钟以前</span>
+								                                    </p>
+								                                    <span class="status online"><i class="en-dot"></i></span>
+								                                    <p class="chat-txt">你好，早上好.</p>
+								                                </li>
+								                                <li class="chat-me">
+								                                    <p class="avatar">
+								                                        <img src="/img/48.jpg" alt="SuggeElson">
+								                                    </p>
+								                                    <p class="chat-name">谢连武 <span class="chat-time">10分钟以前</span>
+								                                    </p>
+								                                    <span class="status online"><i class="en-dot"></i></span>
+								                                    <p class="chat-txt">早上好.</p>
+								                                </li>
+								                                <li class="chat-user">
+								                                    <p class="avatar">
+								                                        <img src="/img/49.jpg" alt="@chadengle">
+								                                    </p>
+								                                    <p class="chat-name">Chad Engle <span class="chat-time">now</span>
+								                                    </p>
+								                                    <span class="status online"><i class="en-dot"></i></span>
+								                                    <p class="chat-txt">Thank you, have a nice day</p>
+								                                </li>
+								                            </ul>
+								                            <div class="chat-write">
+								                                <form action="#" class="form-horizontal" role="form">
+								                                    <div class="form-group">
+								                                        <textarea name="sendmsg" id="sendMsg" class="form-control elastic" rows="1"></textarea>
+								                                        <a role="button" class="btn" id="attach_photo_btn">
+								                                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+								                                        </a>
+								                                    </div>
+								                                    <!-- End .form-group  -->
+								                                </form>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+								            </div>
+								            <!-- End .sidebar-inner -->
+								        </div>
+								        <!-- End #right-sidebar -->  
+									  
+									  
+									  <!--
+                                      	作者：278363011@qq.com
+                                      	时间：2018-08-04
+                                      	描述：
+                                      -->
+								</nav>
+								
+								
+		</div>
+		<!--
+        	作者：278363011@qq.com
+        	时间：2018-08-01
+        	描述：页面主体
+        -->
+        <div class="main">
+		        		<!--
+		                	作者：278363011@qq.com
+		                	时间：2018-08-01
+		                	描述：主体左边---侧边栏
+		                -->
+		        		<div class="main-sidebar col-sm-2 col-md-2 col-lg-2">
+		        				<ul class="nav nav-pills nav-stacked">
+								  <li role="presentation" class="" id="/html/main.html"><a href="#"><i class="fa fa-home fa-fw"></i>&nbsp;首页</a></li>
+								  <li role="presentation" class="" id="/html/survey.html"><a href="#"><i class="fa fa-newspaper-o" aria-hidden="true"></i>&nbsp;概况</a></li>
+								  <li role="presentation" class="" id="/html/usermanager.html"><a href="#"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;用户管理</a></li>
+								  <li role="presentation" class="" id="/html/announcement.html"><a href="#"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;公告管理</a></li>
+								  <li role="presentation" class="" id="/html/printshipping.html"><a href="#"><i class="fa fa-print" aria-hidden="true"></i>&nbsp;打印发货</a></li>
+								  <li role="presentation" class="" id="/html/datastatistics.html"><a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;数据统计</a></li>
+								  <li role="presentation" class="" id="/html/quickcheck.html"><a href="#"><i class="fa fa-search" aria-hidden="true"></i>&nbsp;快速查单</a></li>
+								  <li role="presentation" class="" id="/html/logisticsmonitor.html"><a href="#"><i class="fa fa-truck" aria-hidden="true"></i>&nbsp;物流监控</a></li>
+								</ul>
+								
+								<div class="panel panel-warning" style="margin-top: 20px;padding-bottom: 0px;">
+								  <div class="panel-heading text-center">公告</div>
+								  <div class="panel-body" style="padding: 0;">
+								    	<!--
+                                        	公告列表
+                                        -->
+								    	<div class="list-group" style="padding-bottom: 0px;">
+										  <a href="#" class="list-group-item">
+										    老客户优惠
+										  </a>
+										  <a href="#" class="list-group-item">关于发货问题须知 <span>2018/8/10 18:36</span></a>
+										  <a href="#" class="list-group-item">代理须知<span>2018/8/10 18:36</span></a>
+										  <a href="#" class="list-group-item" style="color: red;">关于打印订单问题的流程介绍及注意事项<span>2018/8/10 18:36</span></a>
+										  <a href="#" class="list-group-item" style="color: green;">关于本站<span>2018/8/10 18:36</span></a>
+										</div>
+								  </div>
+								</div>
+								
+								
+		        			
+		        		</div>
+		        	   <!--
+		               	作者：278363011@qq.com
+		               	时间：2018-08-01
+		               	描述：主体右边---包含页面
+		               -->
+		        		<div class="main-pages col-sm-10 col-md-10 col-lg-10" >
+		        			
+		        			<iframe id="iframepage" src="/html/printshipping.html" class="col-sm-12 col-md-12 col-lg-12" scrolling="no" frameborder="0" style="height: 1500px;"></iframe>
+		        		</div>
+        </div>
+        <!--
+        	作者：278363011@qq.com
+        	时间：2018-08-01
+        	描述：页面尾部
+        -->
+        <div class="mian-footer main-sidebar col-sm-12 col-md-12 col-lg-12" style="height: 300px;">
+        	<div id="goup" style="position: fixed;display: none;z-index: 9;bottom: 2%;right: 1%;">
+        		<a style="opacity: 0.5;cursor: pointer;">
+        			<img src="/img/backtop.png" style="display: inline;width: 48px;" />
+        		</a>
+        	</div>
+        	页面尾部
+        </div>
+       	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+		<script type="text/javascript" src="/js/index.js" ></script>
+		<script>
+			
+			
+			
+		</script>
+	</body>
+		
+</html>
